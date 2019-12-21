@@ -1,7 +1,7 @@
 require('dotenv').config()
 const pgPromise = require('pg-promise');
 
-const pgp = pgPromise({}); // Empty object means no additional config required
+const pgp = pgPromise({});
 
 const config = {
     host: process.env.POSTGRES_HOST,
@@ -12,5 +12,11 @@ const config = {
 };
 
 const db = pgp(config);
+
+// Example Query
+// db.one('select * from users')
+//     .then(res => {
+//         console.log(res);
+//     });
 
 exports.db = db;
