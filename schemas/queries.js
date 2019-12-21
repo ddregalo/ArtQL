@@ -1,8 +1,8 @@
 const { db } = require('../pgAdaptor.js')
-const { GraphQlObjectType, GraphQLID } = require('graphql')
+const { GraphQLObjectType, GraphQLID } = require('graphql')
 const { UserType, ProjectType } = require('./types.js')
 
-const RootQuery = new GraphQlObjectType({
+const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     type: 'Query',
     fields: {
