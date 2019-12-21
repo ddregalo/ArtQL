@@ -13,21 +13,21 @@ const RootMutation = new GraphQLObjectType({
                 creatorId: { type:GraphQLID },
                 title: { type: GraphQLString },
                 description: { type: GraphQLString },
-            }
-        },
-        resolve(parentValue, args) {
-            const query = 'INSERT INTO project(creator_id, created, title, description) VALUES ($1, $2, $3, $4) RETURNING title'
-            const params = [
-                args.creatorId,
-                new Date(),
-                args.title,
-                args.description
-            ]
+            },
+            resolve(parentValue, args) {
+                const query = 'INSERT INTO project(creator_id, created, title, description) VALUES ($1, $2, $3, $4) RETURNING title'
+                const params = [
+                    args.creatorId,
+                    new Date(),
+                    args.title,
+                    args.description
+                ]
 
-            return db
-                    .one(query, params)
-                    .then(res => res)
-                    .catch(err => console.log(err))
+                return db
+                        .one(query, params)
+                        .then(res => res)
+                        .catch(err => console.log(err))
+            }
         }
     } 
 })
