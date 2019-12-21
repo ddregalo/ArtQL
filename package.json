@@ -1,0 +1,26 @@
+{
+  "name": "vuegraphpost",
+  "version": "1.0.0",
+  "description": "Explore graohql with vue node and postgresql",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddregalo/ArtQL.git"
+  },
+  "keywords": [
+    "graphql",
+    "vue",
+    "node",
+    "express",
+    "postgresql"
+  ],
+  "author": "daniel campos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ddregalo/ArtQL/issues"
+  },
+  "homepage": "https://github.com/ddregalo/ArtQL#readme"
+}
