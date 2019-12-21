@@ -2,9 +2,10 @@
   "name": "vuegraphpost",
   "version": "1.0.0",
   "description": "Explore graohql with vue node and postgresql",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
