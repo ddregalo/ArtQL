@@ -25,5 +25,5 @@ const ProjectType = new GraphQLObjectType({
     }
 })
 
-exports.UserType = UserType;
+exports.UserType = UserType
 exports.ProjectType = ProjectType
