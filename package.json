@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/ddregalo/ArtQL/issues"
   },
-  "homepage": "https://github.com/ddregalo/ArtQL#readme"
+  "homepage": "https://github.com/ddregalo/ArtQL#readme",
+  "dependencies": {
+    "node-modules": "^1.0.1"
+  }
 }
