@@ -1,6 +1,8 @@
-const graphql = require('graphql')
-const db = require('../pgAdaptor.js')
-const { GraphQLObjectType, GraphQLID, GraphQLBoolean, GraphQLString } = graphql
+const { db } = require('../pgAdaptor.js')
+const { GraphQLObjectType,
+        GraphQLID,
+        GraphQLBoolean, 
+        GraphQLString } = require('graphql')
 const { ProjectType } = require('./types')
 
 const RootMutation = new GraphQLObjectType({
@@ -20,13 +22,12 @@ const RootMutation = new GraphQLObjectType({
                     args.creatorId,
                     new Date(),
                     args.title,
-                    args.description
-                ]
+                    args.description]
 
                 return db
-                        .one(query, params)
-                        .then(res => res)
-                        .catch(err => console.log(err))
+                    .one(query, params)
+                    .then(res => res)
+                    .catch(err => err)
             }
         }
     } 

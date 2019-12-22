@@ -13,10 +13,4 @@ const config = {
 
 const db = pgp(config);
 
-// Example Query
-// db.one('select * from users')
-//     .then(res => {
-//         console.log(res);
-//     });
-
 exports.db = db;
